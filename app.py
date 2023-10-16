@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.express as px
 df=pd.read_csv("India's.csv")
 lst=list(df["State"].unique())
-lst.insert(0,"India's Overall")
+lst.insert(0,"Overall India")
 
 st.sidebar.title("India's Census")
 selected_State=st.sidebar.selectbox("select a state",lst)
@@ -15,7 +15,7 @@ if plot:
     st.text("size represent primary parameter")
     st.text("color represent secondary parameter")
 
-    if selected_State=="India's Overall":
+    if selected_State=="Overall India":
         fig=px.scatter_mapbox(df,lat="Latitude",lon="Longitude",size=primary,color=Secondary,hover_name="District",
                               zoom=4,size_max=35,width=1200,color_continuous_scale="Viridis",height=700,mapbox_style="carto-positron")
         st.plotly_chart(fig,use_container_width=True)
