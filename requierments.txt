@@ -1,4 +1,9 @@
 streamlit
 pandas
 plotly
+Plotly
+plotly.express
+plotly.Express
+plotly Express
+plotly express
 numpy
