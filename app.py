@@ -12,8 +12,8 @@ primary=st.sidebar.selectbox("select primary parameter", df.columns[5:])
 Secondary=st.sidebar.selectbox("select secondary parameter", df.columns[5:])
 plot=st.sidebar.button("Plot graph")
 if plot:
-    st.text("size reperesent primary parameter")
-    st.text("color reperesent secondary parameter")
+    st.text("size represent primary parameter")
+    st.text("color represent secondary parameter")
 
     if selected_State=="India's Overall":
         fig=px.scatter_mapbox(df,lat="Latitude",lon="Longitude",size=primary,color=Secondary,hover_name="District",
