@@ -17,12 +17,13 @@ if plot:
 
     if selected_State=="India's Overall":
         fig=px.scatter_mapbox(df,lat="Latitude",lon="Longitude",size=primary,color=Secondary,hover_name="District",
-                              zoom=4,size_max=35,width=1200,height=700,mapbox_style="carto-positron")
+                              zoom=4,size_max=35,width=1200,color_continuous_scale="Viridis",height=700,mapbox_style="carto-positron")
         st.plotly_chart(fig,use_container_width=True)
     else:
         state_df=df[df.State==selected_State]
-        fig=px.scatter_mapbox(state_df,lat="Latitude",lon="Longitude",size=primary,color=Secondary,hover_name="District",
+        fig=px.scatter_mapbox(state_df,lat="Latitude",lon="Longitude",size=primary,color=Secondary,color_continuous_scale="Viridis",hover_name="District",
                               zoom=5,size_max=35,width=1200,height=700,mapbox_style="carto-positron")
         st.plotly_chart(fig,use_container_width=True)
+
 
 
